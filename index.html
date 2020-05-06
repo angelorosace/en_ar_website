@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html>
   <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <!-- we import arjs version without NFT but with marker + location based support -->
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
   <body style="margin : 0px; overflow: hidden;">
-    <a-scene embedded arjs>  
-      <a-box position='0 0 0'></a-box>
-      <a-marker-camera preset="pattern" type="pattern" url="pattern-black_esn_star.patt"></a-marker-camera>
+    <a-scene embedded arjs>
+      <a-marker type="pattern" url="pattern-logo_estrella_negro.patt">
+        <a-entity
+          position="0 0 0"
+          scale="0.1 0.1 0.1"
+          gltf-model="test_sagrada_familia.glb"
+        ></a-entity>
+      </a-marker>
+      <a-entity camera></a-entity>
     </a-scene>
   </body>
 </html>
